@@ -24,7 +24,7 @@ export const ProductCategoryFilter = ({
                         <Link key={item.id} href={`/shop/${item.id}`}>
                             <Button
                                 variant={
-                                    selectedCategory === "1"
+                                    selectedCategory === item.id
                                         ? "default"
                                         : "outline"
                                 }

@@ -13,7 +13,7 @@ export const getProductList = async (
     const res = await fetch(`${DOMAIN_API}products/${query}`, {
         next: { revalidate: 0 },
     });
-    const r = await res.json();
+    const r = res.json();
     if (!res.ok) {
         return undefined;
     }
@@ -24,9 +24,9 @@ export const getCategoriesList = async (): Promise<
     ICategoryType[] | undefined | null
 > => {
     const res = await fetch(`${DOMAIN_API}categories`, {
-        next: { revalidate: 0 },
+        next: { revalidate: 600 },
     });
-    const r = await res.json();
+    const r = res.json();
     if (!res.ok) {
         return undefined;
     }
