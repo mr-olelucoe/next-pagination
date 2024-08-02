@@ -11,8 +11,6 @@ interface Props {
 }
 export const ProductList = async ({ categoryId = "", page = "1" }: Props) => {
     const apiPage = Number(page) ? page : "1";
-    const apiCategory = categoryId ? `&category=${categoryId}` : "";
-
     const products = await getProductList(categoryId, apiPage);
     const categories = await getCategoriesList();
 

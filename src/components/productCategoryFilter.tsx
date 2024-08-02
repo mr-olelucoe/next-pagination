@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import { ICategoryType } from "@/lib/types";
-import { it } from "node:test";
 
 interface Props {
     selectedCategory?: string;
